@@ -1,0 +1,14 @@
+%%%%%%%%%%%%%%%%%% encryption Function %%%%%%%%%%%%%%%%%%%%%%%%%
+function s=decryption(x)
+x=double(x);
+
+for k=1:length(x)
+    x(k)=x(k)-5;
+    if x(k) <79
+        s(k)=x(k)+47;
+    elseif x(k)>79
+        s(k)=x(k)-47;
+    end
+end
+s=char(s);
+return
